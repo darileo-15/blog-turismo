@@ -1,85 +1,88 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-        <link rel = "stylesheet" href="css/Reservación.css">
-        
-        <title> TUPANANCHISKAMA </title>
+    <link rel="stylesheet" href="css/Reservación.css">
 
-        <link rel="icon " href="img/Reservas_Turísticas/TUPANANCHISKAMA logo.ico">
-    </head>
-    <body>
-        
-        <!--Aquí comienza el header-->
-        <header>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <img id="logo" src="img/Reservas_Turísticas/TUPANANCHISKAMA - copia.jpeg"></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>              
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                        <a class="nav-link" href="Página_Principal.html"> Home <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#Mis_Reservas">Mis Reservas</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="Información_de_la_Página.html">Contactos</a>
-                        </li>
-                    </ul>                  
-                </div>
-            </nav>
-        </header>
-        <!--Aquí termina el header-->
+    <title> TUPANANCHISKAMA </title>
 
-        <form class= "form_reg" action="">
-            <div class= "container">
-                <div class= "from_top"  id="tblreservacion">
-                    <h2>Reserva</h2>
-                </div>
+    <link rel="icon " href="img/Reservas_Turísticas/TUPANANCHISKAMA logo.ico">
+</head>
 
-                <h5>DESTINO:</h5> 
-                <input class="form-group" type="text" name="destino" id="destino" placeholder= "INGRESE SU DESTINO"><br>
+<body>
 
-                <h5>NÚMERO DE PERSONAS:</h5>
-                <input class="input" type="number" name="personas" id="personas"placeholder="INGRESE EL NÚMERO DE PERSONAS"
-                required> 
+    <!--Aquí comienza el header-->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <img id="logo" src="img/Reservas_Turísticas/TUPANANCHISKAMA - copia.jpeg"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="Página_Principal.html"> Home <span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Mis_Reservas">Mis Reservas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Información_de_la_Página.html">Contactos</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!--Aquí termina el header-->
 
-                <h5>FECHA DE SALIDA:</h5>
-                <input class="input" type="date" name="salida" id="salida" placeholder="&#26531; 
+    <form class="form_reg" action="">
+        <div class="container">
+            <div class="from_top" id="tblreservacion">
+                <h2>Reserva</h2>
+            </div>
+
+            <h5>DESTINO:</h5>
+            <input class="form-group" type="text" name="destino" id="destino" placeholder="INGRESE SU DESTINO"><br>
+
+            <h5>NÚMERO DE PERSONAS:</h5>
+            <input class="input" type="number" name="personas" id="personas" placeholder="INGRESE EL NÚMERO DE PERSONAS"
+                required>
+
+            <h5>FECHA DE SALIDA:</h5>
+            <input class="input" type="date" name="salida" id="salida" placeholder="&#26531; 
                 salida" required> <br>
 
-                <h5>FECHA DE RETORNO:</h5>
-                <input class="input" type="date" name="retorno" id="retorno" placeholder="&#26531; 
+            <h5>FECHA DE RETORNO:</h5>
+            <input class="input" type="date" name="retorno" id="retorno" placeholder="&#26531; 
                 retorno" required> <br>
 
-                <div>
-                    <button  type="submit" id="btnRegistrar" class="btn btn-primary mb-2"               
-                    onclick="guardarDatosReserva (destino.value, 
+            <div>
+                <button type="submit" id="btnRegistrar" class="btn btn-primary mb-2" onclick="guardarDatosReserva (destino.value, 
                             personas.value, salida.value, retorno.value)">
                     RESERVAR
-                    </button>
-                </div>
+                </button>
             </div>
-        </form>
+        </div>
+    </form>
 
-        <!-- Tablas de Mis Reservas --> 
-        <div class="card">
-            <div class="card-header">
-                <h2 id="Mis_Reservas">Mis Reservas</h2>
-            </div>
-            <div class="card-body">
-                <div class="table-responsive">
-                    <table id="userList" class="table table-bordered table-hover table-striped">
-                        <thead class="thead-light">
+    <!-- Tablas de Mis Reservas -->
+    <div class="card">
+        <div class="card-header">
+            <h2 id="Mis_Reservas">Mis Reservas</h2>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table id="userList" class="table table-bordered table-hover table-striped">
+                    <thead class="thead-light">
                         <tr>
                             <th scope="col">#</th>
                             <th scope="col">DESTINO</th>
@@ -89,44 +92,51 @@
                             <th scope="col">FECHA DE RETORNO</th>
                             <th></th>
                         </tr>
-                        </thead>
-                        <tbody>
+                    </thead>
+                    <tbody>
                         <tr>
                             <th scope="row">1</th>
-                            <td id ="destinoTabla"> <script> document.write (localStorage.getItem ("destino")) </script> </td>
-                            <td id ="personasTabla"> <script> document.write (localStorage.getItem ("personas")) </script> </td>
-                            <td id ="salidaTabla"> <script> document.write (localStorage.getItem ("salida")) </script> </td>
-                            <td id ="retornoTabla"> <script> document.write (localStorage.getItem ("retorno")) </script> </td>
+                            <td id="destinoTabla">
+                                <script> document.write(localStorage.getItem("destino")) </script>
+                            </td>
+                            <td id="personasTabla">
+                                <script> document.write(localStorage.getItem("personas")) </script>
+                            </td>
+                            <td id="salidaTabla">
+                                <script> document.write(localStorage.getItem("salida")) </script>
+                            </td>
+                            <td id="retornoTabla">
+                                <script> document.write(localStorage.getItem("retorno")) </script>
+                            </td>
                             <td>
-                                <a href="Reservación.html" id="btnEditar" type="button" class="btn btn-success md-2 center" >EDITAR</a>
+                                <a href="Reservación.html" id="btnEditar" type="button"
+                                    class="btn btn-success md-2 center">EDITAR</a>
 
-                                <a  href="Reservación.html" type="reset" id="btnEliminar" class="btn btn-danger md-2 center"               
-                                    onclick="gEliminar ()">
+                                <a href="Reservación.html" type="reset" id="btnEliminar"
+                                    class="btn btn-danger md-2 center" onclick="gEliminar ()">
                                     CANCELAR
                                 </a>
                             </td>
                         </tr>
-                        </tbody>
-                    </table>
-                </div>
+                    </tbody>
+                </table>
             </div>
         </div>
-   
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
-            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" 
-        crossorigin="anonymous">
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
         </script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" 
-            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" 
-            crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
         </script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" 
-            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" 
-            crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
         </script>
-        <script src="js/Reservación.js"></script>
-        
-    </body>
+    <script src="js/Reservación.js"></script>
+
+</body>
+
 </html>

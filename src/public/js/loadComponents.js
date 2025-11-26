@@ -1,18 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
-	includeHTML("header", "/blog-turismo/views/partials/header.html");
-	includeHTML("footer", "/blog-turismo/views/partials/footer.html");
+	const header = document.getElementById("header-placeholder");
+	const footer = document.getElementById("footer-placeholder");
+
+	fetch("views/partials/header.html")
+		.then((res) => res.text())
+		.then((html) => (header.innerHTML = html))
+		.catch((err) => console.error("Error cargando header:", err));
+
+	fetch("views/partials/footer.html")
+		.then((res) => res.text())
+		.then((html) => (footer.innerHTML = html))
+		.catch((err) => console.error("Error cargando footer:", err));
 });
-
-function includeHTML(id, file) {
-	fetch(file)
-		.then((response) => response.text())
-		.then((data) => {
-			document.getElementById(id).innerHTML = data;
-
-			// Si se cargó el header, activar el menú
-			if (id === "header") {
-				initHeaderMenu();
-			}
-		})
-		.catch((err) => console.error("Error cargando", file, err));
-}

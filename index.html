@@ -1,24 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Blog de Turismo</title>
+
+    <link rel="stylesheet" href="src/public/css/partials/header.css">
+    <link rel="stylesheet" href="src/public/css/partials/footer.css">
+</head>
+
 <body>
 
-    <!-- HEADER se carga automáticamente -->
-    <div id="header-placeholder"></div>
+    <div id="header"></div>
 
-    <title>Bienvenido a mi Blog de Turismo</title>
+    <main>
+        <h1>Bienvenido al Blog de Turismo</h1>
+        <p>Contenido del blog aquí...</p>
+    </main>
 
-    <!-- CUERTO se carga automáticamente -->
-    <h1>Mi Blog de Turismo</h1>
+    <div id="footer"></div>
 
-    <ul>
-        <li><a href="src/views/Archidona.html">Iglesias</a></li>
-        <li><a href="views/parques/parque1.html">Parques</a></li>
-        <li><a href="views/monumentos/monumento1.html">Monumentos</a></li>
-        <li><a href="views/museos/museo1.html">Museos</a></li>
-        <li><a href="views/lugares.html">Todos los lugares</a></li>
-    </ul>
+    <script>
+        // Cargar header
+        fetch("src/views/partials/header.html")
+            .then(res => res.text())
+            .then(html => document.getElementById("header").innerHTML = html);
 
-    <!-- FOOTER se carga automáticamente -->
-<div id="footer-placeholder"></div>
+        // Cargar footer
+        fetch("src/views/partials/footer.html")
+            .then(res => res.text())
+            .then(html => document.getElementById("footer").innerHTML = html);
+    </script>
 
-<script src="./src/public/js/headerMenu.js"></script>
-<script src="./src/public/js/loadComponents.js"></script>
 </body>
+
+</html>

@@ -1,483 +1,74 @@
+/* ----------- RESET BÁSICO ----------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 nav {
-  background-color: #b98cb9;
-  position: absolute;
   width: 100%;
-  height: 100%;
-  max-width: 100%;
-  max-height: 75px;
-  text-align: center;
-  top: 0%;
-  left: 0%;
+  background-color: #003D73;
+  /* Azul profundo */
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
 }
 
-/*Logo Navbar*
-nav #img {
-  width: 100%;
-  height: 100%;
-  max-width: 4.5%;
-  max-height: 85%;
-  position: absolute;
-  top: 7.5%;
-  left: 1%;
-}
-
-nav #img img {
-  width: 100%;
-  height: 100%;
-}
-
-#EPILEPSUM,
-#Contenido,
-#efectosSecundarios,
-#Experiencias,
-#Consejos,
-#Dudas,
-#InformacionNavbar {
-  position: absolute;
-  top: 30%;
-  left: 6%;
-}
-
-#Contenido {
-  left: 18%;
-}
-
-#efectosSecundarios {
-  left: 27%;
-}
-
-#Experiencias {
-  left: 39%;
-}
-
-#Consejos {
-  left: 48%;
-}
-
-#Dudas {
-  left: 56%;
-}
-
-#InformacionNavbar {
-  display: none;
-  position: absolute;
-}
-
-#EPILEPSUM a,
-#Contenido a,
-#efectosSecundarios a,
-#Experiencias a,
-#Consejos a,
-#Dudas a,
-#InformacionNavbar a {
-  color: black;
-  text-decoration: none;
-}
-
-#CerrarSesion {
-  border-color: transparent;
-  text-align: center;
-  border-radius: 20px;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  max-width: 10%;
-  max-height: 50%;
-  top: 25%;
-  left: 88%;
-}
-
-#CerrarSesion button {
-  border-color: transparent;
+nav a {
   color: white;
-  width: 100%;
-  height: 100%;
-  font-size: 20px;
-}
-
-#CerrarSesion a {
   text-decoration: none;
+  margin-right: 20px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: 0.3s;
 }
 
-/*Navegacion pequeña*
-#hamburguesa,
-#cierra {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0.5%;
-  right: 0.5%;
+nav a:hover {
+  color: #F2C230;
+  /* Amarillo dorado */
+}
+
+#menu-btn {
+  color: white;
+  background: none;
+  border: none;
+  font-size: 25px;
+  cursor: pointer;
   display: none;
 }
 
-#cierra a button img,
-#hamburguesa a button img {
-  width: 100%;
-  height: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+/* Menu links */
+#menu-links {
+  display: flex;
+  gap: 20px;
 }
 
-/* RESPONSIVE *
-@media screen and (orientation: landscape) and (max-width: 1400px) and (min-width: 1100px) {
-  nav {
-    max-width: 100%;
-  }
+/* ----------- RESPONSIVE ----------- */
+@media (max-width: 768px) {
 
-  #Contenido {
-    left: 20%;
-  }
-
-  #efectosSecundarios {
-    left: 32%;
-  }
-
-  #Experiencias {
-    left: 44%;
-  }
-
-  #Consejos {
-    left: 62%;
-  }
-
-  #Dudas {
-    left: 73%;
-  }
-
-  #CerrarSesion {
-    top: 5%;
-    max-height: 90%;
-  }
-}
-
-@media only screen and (orientation: landscape) and (max-width: 1100px) and (min-width: 900px) {
-  nav {
-    max-width: 100%;
-  }
-
-  #Contenido {
-    left: 21%;
-  }
-
-  #efectosSecundarios {
-    left: 32.5%;
-  }
-
-  #Experiencias {
-    left: 44%;
-  }
-
-  #Consejos {
-    left: 62.25%;
-  }
-
-  #Dudas {
-    left: 73%;
-  }
-
-  #CerrarSesion {
-    top: 5%;
-    max-height: 90%;
-  }
-}
-
-@media only screen and (orientation: landscape) and (max-width: 900px) and (min-width: 690px) {
-  nav {
-    display: none;
-    max-width: 100%;
-    max-height: 100%;
-  }
-
-  #cierra {
+  #menu-btn {
     display: block;
-    max-width: 10%;
-    max-height: 7.5%;
   }
 
-  #hamburguesa {
-    max-width: 10%;
-    max-height: 7.5%;
+  #menu-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #003D73;
+    padding: 10px 0;
+    margin-top: 10px;
   }
 
-  nav #img {
-    max-width: 15%;
-    max-height: 15%;
-    top: 2%;
-    left: 42.5%;
-  }
-
-  #EPILEPSUM,
-  #Contenido,
-  #efectosSecundarios,
-  #Experiencias,
-  #Consejos,
-  #Dudas,
-  #InformacionNavbar {
-    top: 17.5%;
-    left: 0%;
+  #menu-links a {
+    padding: 10px 20px;
+    display: block;
     width: 100%;
   }
 
-  #Contenido {
-    top: 30%;
-  }
-
-  #efectosSecundarios {
-    top: 40%;
-  }
-
-  #Experiencias {
-    top: 50%;
-  }
-
-  #Consejos {
-    top: 60%;
-  }
-
-  #Dudas {
-    top: 70%;
-  }
-
-  #InformacionNavbar {
-    top: 80%;
-  }
-
-  #CerrarSesion {
-    top: 90%;
-    left: 0%;
-    max-width: 100%;
-    height: 6%;
-  }
-
-  footer {
-    display: none;
+  #menu-links.show {
+    display: flex;
   }
 }
-
-@media only screen and (orientation: portrait) and (max-width: 900px) and (min-width: 690px) {
-  nav {
-    display: none;
-    max-width: 100%;
-    max-height: 100%;
-  }
-
-  #CerrarSesion {
-    top: -5%;
-  }
-
-  #cierra {
-    display: block;
-    max-width: 10%;
-    max-height: 7.5%;
-  }
-
-  #hamburguesa {
-    max-width: 10%;
-    max-height: 7.5%;
-  }
-
-  nav #img {
-    max-width: 15%;
-    max-height: 15%;
-    top: 2%;
-    left: 42.5%;
-  }
-
-  #EPILEPSUM,
-  #Contenido,
-  #efectosSecundarios,
-  #Experiencias,
-  #Consejos,
-  #Dudas,
-  #InformacionNavbar {
-    top: 17.5%;
-    left: 0%;
-    width: 100%;
-  }
-
-  #Contenido {
-    top: 30%;
-  }
-
-  #efectosSecundarios {
-    top: 40%;
-  }
-
-  #Experiencias {
-    top: 50%;
-  }
-
-  #Consejos {
-    top: 60%;
-  }
-
-  #Dudas {
-    top: 70%;
-  }
-
-  #InformacionNavbar {
-    top: 80%;
-  }
-
-  #CerrarSesion {
-    top: 90%;
-    left: 0%;
-    max-width: 100%;
-    height: 6%;
-  }
-
-  footer {
-    display: none;
-  }
-}
-
-@media only screen and (orientation: portrait) and (max-width: 700px) and (min-width: 384px) {
-  nav {
-    display: none;
-    max-width: 100%;
-    max-height: 100%;
-  }
-
-  #CerrarSesion {
-    top: -5%;
-  }
-
-  #cierra {
-    display: block;
-    max-width: 15%;
-    max-height: 7.5%;
-  }
-
-  #hamburguesa {
-    max-width: 15%;
-    max-height: 7.5%;
-  }
-
-  nav #img {
-    max-width: 25%;
-    max-height: 12.5%;
-    top: 2%;
-    left: 37.5%;
-  }
-
-  #EPILEPSUM,
-  #Contenido,
-  #efectosSecundarios,
-  #Experiencias,
-  #Consejos,
-  #Dudas,
-  #InformacionNavbar {
-    top: 17.5%;
-    left: 0%;
-    width: 100%;
-  }
-
-  #Contenido {
-    top: 30%;
-  }
-
-  #efectosSecundarios {
-    top: 40%;
-  }
-
-  #Experiencias {
-    top: 50%;
-  }
-
-  #Consejos {
-    top: 60%;
-  }
-
-  #Dudas {
-    top: 70%;
-  }
-
-  #InformacionNavbar {
-    top: 80%;
-  }
-
-  #CerrarSesion {
-    top: 90%;
-    left: 0%;
-    max-width: 100%;
-    height: 6%;
-  }
-
-  footer {
-    display: none;
-  }
-}
-
-@media only screen and (orientation: portrait) and (max-width: 384px) and (min-width: 150px) {
-  nav {
-    display: none;
-    max-width: 100%;
-    max-height: 100%;
-  }
-
-  #cierra {
-    display: block;
-    max-width: 15%;
-    max-height: 7.5%;
-  }
-
-  #hamburguesa {
-    max-width: 15%;
-    max-height: 7.5%;
-  }
-
-  nav #img {
-    max-width: 25%;
-    max-height: 12.5%;
-    top: 2%;
-    left: 37.5%;
-  }
-
-  #EPILEPSUM,
-  #Contenido,
-  #efectosSecundarios,
-  #Experiencias,
-  #Consejos,
-  #Dudas,
-  #InformacionNavbar {
-    top: 17.5%;
-    left: 0%;
-    width: 100%;
-  }
-
-  #Contenido {
-    top: 30%;
-  }
-
-  #efectosSecundarios {
-    top: 40%;
-  }
-
-  #Experiencias {
-    top: 50%;
-  }
-
-  #Consejos {
-    top: 60%;
-  }
-
-  #Dudas {
-    top: 70%;
-  }
-
-  #InformacionNavbar {
-    top: 80%;
-  }
-
-  #CerrarSesion {
-    top: 90%;
-    left: 0%;
-    max-width: 100%;
-    height: 6%;
-  }
-
-  footer {
-    display: none;
-  }
-}*/

@@ -1,37 +1,20 @@
-<!DOCTYPE html>
-<html lang="es">
+<link rel="stylesheet" href="src/public/css/partials/header.css">
 
-<head>
-    <meta charset="UTF-8">
-    <title>Blog de Turismo</title>
+<nav>
+    <a href="/blog-turismo/index.html">Blog de Turismo</a>
 
-    <link rel="stylesheet" href="src/public/css/partials/header.css">
-    <link rel="stylesheet" href="src/public/css/partials/footer.css">
-</head>
+    <button id="menu-btn">☰</button>
 
-<body>
+    <div id="menu-links">
+        <a href="/blog-turismo/iglesias/index.html">Iglesias</a>
+        <a href="/blog-turismo/parques/index.html">Parques</a>
+        <a href="/blog-turismo/monumentos/index.html">Monumentos</a>
+        <a href="/blog-turismo/calles/index.html">Calles históricas</a>
+        <a href="/blog-turismo/museos/index.html">Museos</a>
+        <a href="/blog-turismo/bibliotecas/index.html">Bibliotecas</a>
+        <a href="/blog-turismo/sitios_arqueologicos/index.html">Sitios arqueológicos</a>
+        <a href="/blog-turismo/cementerios/index.html">Cementerios</a>
+    </div>
+</nav>
 
-    <div id="header"></div>
-
-    <main>
-        <h1>Bienvenido al Blog de Turismo</h1>
-        <p>Contenido del blog aquí...</p>
-    </main>
-
-    <div id="footer"></div>
-
-    <script>
-        // Cargar header
-        fetch("src/views/partials/header.html")
-            .then(res => res.text())
-            .then(html => document.getElementById("header").innerHTML = html);
-
-        // Cargar footer
-        fetch("src/views/partials/footer.html")
-            .then(res => res.text())
-            .then(html => document.getElementById("footer").innerHTML = html);
-    </script>
-
-</body>
-
-</html>
+<script src="/blog-turismo/src/public/js/headerMenu.js"></script>

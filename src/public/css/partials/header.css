@@ -1,4 +1,4 @@
-/* ----------- RESET BÁSICO ----------- */
+/* ----------- RESET ----------- */
 * {
   margin: 0;
   padding: 0;
@@ -8,13 +8,17 @@
 nav {
   width: 100%;
   background-color: #003D73;
-  /* Azul profundo */
   padding: 15px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: sticky;
-  top: 0;
+}
+
+nav .logo {
+  color: white;
+  font-size: 1.3rem;
+  text-decoration: none;
+  font-weight: 700;
 }
 
 nav a {
@@ -28,19 +32,18 @@ nav a {
 
 nav a:hover {
   color: #F2C230;
-  /* Amarillo dorado */
 }
 
 #menu-btn {
   color: white;
   background: none;
   border: none;
-  font-size: 25px;
+  font-size: 28px;
   cursor: pointer;
   display: none;
 }
 
-/* Menu links */
+/* Menu links en pantallas grandes */
 #menu-links {
   display: flex;
   gap: 20px;
@@ -65,9 +68,9 @@ nav a:hover {
   #menu-links a {
     padding: 10px 20px;
     display: block;
-    width: 100%;
   }
 
+  /* Cuando se abre el menú */
   #menu-links.show {
     display: flex;
   }

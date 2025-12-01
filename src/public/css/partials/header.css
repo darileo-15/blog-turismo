@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-#navbar {
+nav {
   background-color: rgb(21, 125, 162);
   position: absolute;
   width: 100%;
@@ -17,6 +17,17 @@
   left: 0%;
 }
 
+#navbar {
+  background-color: rgb(21, 125, 162);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100px;
+  text-align: center;
+  top: 0%;
+  left: 0%;
+}
 /* NO SE TIENE */
 /*
 nav #img {
@@ -35,7 +46,7 @@ nav #img img {
 }
 */
 
-#navbar  #menu00 {
+#navbar  #navbar #menu-links #menu00 {
   background-color: yellow;
   width: 100%;
   height: 100%;
@@ -47,70 +58,80 @@ nav #img img {
 }
 
 #navbar #menu-links {
-  position: absolute;
-  top: 30%;
-  left: 5%;
-  color: white;
-  /*
-  text-decoration: none;
-  margin-right: 20px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  transition: 0.3s;
-  text-align: center center;*/
-}
-
-#menu01,
-#menu02,
-#menu03,
-#menu04,
-#menu05,
-#menu06,
-#menu07,
-#menu08 {
-  position: absolute;
-  top: 30%;
-  left: 5%;
-  color: white;
-  /*
-  text-decoration: none;
-  margin-right: 20px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  transition: 0.3s;
-  text-align: center center;*/
-}
-
-#menu01 {
+  background-color: orange;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 80%;
+  text-align: center;
+  top: 0%;
   left: 15%;
+  color: white;
+  /*
+  text-decoration: none;
+  margin-right: 20px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: 0.3s;
+  text-align: center center;*/
 }
 
-#menu02 {
-  left: 25%;
+#navbar #menu-links #menu01,
+#navbar #menu-links #menu02,
+#navbar #menu-links #menu03,
+#navbar #menu-links #menu04,
+#navbar #menu-links #menu05,
+#navbar #menu-links #menu06,
+#navbar #menu-links #menu07,
+#navbar #menu-links #menu08 {
+  background-color: orange;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  text-align: center;
+  top: 0%;
+  left: 0%;
+  color: white;
+  /*
+  text-decoration: none;
+  margin-right: 20px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: 0.3s;
+  text-align: center center;*/
 }
 
-#menu03 {
-  left: 35%;
+#navbar #menu-links #menu01 {
+  left: 10%;
 }
 
-#menu04 {
-  left: 45%;
+#navbar #menu-links #menu02 {
+  left: 20%;
 }
 
-#menu05 {
-  left: 55%;
+#navbar #menu-links #menu03 {
+  left: 30%;
 }
 
-#menu06 {
-  left: 65%;
+#navbar #menu-links #menu04 {
+  left: 40%;
 }
 
-#menu07 {
-  left: 75%;
+#navbar #menu-links #menu05 {
+  left: 50%;
 }
 
-#menu08 {
-  left: 85%;
+#navbar #menu-links #menu06 {
+  left: 60%;
+}
+
+#navbar #menu-links #menu07 {
+  left: 70%;
+}
+
+#navbar #menu-links #menu08 {
+  left: 80%;
 }
 
 nav a:hover {

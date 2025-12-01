@@ -15,6 +15,7 @@ nav {
   text-align: center;
   top: 0%;
   left: 0%;
+  color: white;
 }
 
 /* NO SE TIENE */
@@ -35,6 +36,17 @@ nav #img img {
 }
 */
 
+nav #menu00 {
+  background-color: yellow;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 10%;
+  text-align: center;
+  top: 0%;
+  left: 5%;
+}
+
 #menu-links {
   background-color: orange;
   width: 100%;
@@ -52,17 +64,6 @@ nav #img img {
   font-weight: 600;
   transition: 0.3s;
   text-align: center center;*/
-}
-
-nav #menu-links #menu00 {
-  background-color: yellow;
-  width: 100%;
-  height: 100%;
-  max-width: 100%;
-  max-height: 10%;
-  text-align: center;
-  top: 0%;
-  left: 5%;
 }
 
 nav #menu-links #menu01,

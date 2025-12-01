@@ -6,9 +6,10 @@
 }
 
 nav {
-  background-color: rgb(37, 150, 190);
-  width: 100%;
+  background-color: rgb(21, 125, 162);
   position: absolute;
+  width: 100%;
+  height: 100%;
   max-width: 100%;
   max-height: 75px;
   text-align: center;
@@ -31,15 +32,60 @@ nav #img img {
   height: 100%;
 }
 
-nav a {
+h1{
   background-color: red;
-  color: white;
+      position: absolute;
+      top: 0%;
+      left: 00%;
+    width: 100%;
+      height: 100%;
+      max-width: 100%;
+      max-height: 950px;
+}
+
+nav a {
+  position: absolute;
+  top: 30%;
+  left: 5%;
+  color: white;/*
   text-decoration: none;
   margin-right: 20px;
   font-size: 1.1rem;
   font-weight: 600;
   transition: 0.3s;
-  text-align: center center;
+  text-align: center center;*/
+}
+
+#menu01 {
+  left: 15%;
+}
+
+#menu02 {
+  left: 25%;
+}
+
+#menu03 {
+  left: 35%;
+}
+
+#menu04 {
+  left: 45%;
+}
+
+#menu05 {
+  left: 55%;
+}
+
+#menu06 {
+  left: 65%;
+}
+
+#menu07 {
+  left: 75%;
+}
+
+#menu08 {
+  left: 85%;
 }
 
 nav a:hover {
@@ -61,7 +107,7 @@ nav a:hover {
   gap: 20px;
 }
 
-/* ----------- RESPONSIVE ----------- *
+/* ----------- RESPONSIVE ----------- */
 @media (max-width: 768px) {
 
   #menu-btn {
@@ -72,7 +118,7 @@ nav a:hover {
     display: none;
     flex-direction: column;
     width: 100%;
-    background-color: #003D73;
+    background-color: rgb(21, 125, 162);
     padding: 10px 0;
     margin-top: 10px;
   }
@@ -82,8 +128,8 @@ nav a:hover {
     display: block;
   }
 
-  /* Cuando se abre el menú *
+  /* Cuando se abre el menú */
   #menu-links.show {
     display: flex;
   }
-}*/
+}

@@ -34,11 +34,11 @@ nav #img img {
 
 h1{
   background-color: yellowgreen;
-      position: absolute;
-      top: 0%;
-      left: 00%;
-    width: 1500px;
-      height: 750px;
+  position: absolute;
+  top: 0%;
+  left: 00%;
+  width: 100%;
+  height: 2500px;
 }
 
 nav a {

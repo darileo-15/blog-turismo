@@ -37,7 +37,7 @@ nav #img img {
   position: absolute;
   top: 0%;
   left: 00%;
-  width: 750px;
+  width: 500px;
   height: 1500px;
 }
 
@@ -55,12 +55,14 @@ nav a {
   text-align: center center;*/
 }
 
-menu01 menu02 menu03
-menu04
-menu05
-menu06
-menu07
-menu08 {
+#menu01,
+#menu02,
+#menu03,
+#menu04,
+#menu05,
+#menu06,
+#menu07,
+#menu08 {
   position: absolute;
   top: 30%;
   left: 5%;

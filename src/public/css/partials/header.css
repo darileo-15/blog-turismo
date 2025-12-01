@@ -61,7 +61,7 @@ nav a:hover {
   gap: 20px;
 }
 
-/* ----------- RESPONSIVE ----------- */
+/* ----------- RESPONSIVE ----------- *
 @media (max-width: 768px) {
 
   #menu-btn {
@@ -82,8 +82,8 @@ nav a:hover {
     display: block;
   }
 
-  /* Cuando se abre el menú */
+  /* Cuando se abre el menú *
   #menu-links.show {
     display: flex;
   }
-}
+}*/

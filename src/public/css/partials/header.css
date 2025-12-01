@@ -17,7 +17,7 @@ nav {
   left: 0%;
 }
 
-#navbar {
+nav {
   background-color: rgb(21, 125, 162);
   position: absolute;
   width: 100%;
@@ -46,7 +46,7 @@ nav #img img {
 }
 */
 
-#navbar  #navbar #menu-links #menu00 {
+nav  nav #menu-links #menu00 {
   background-color: yellow;
   width: 100%;
   height: 100%;
@@ -57,7 +57,7 @@ nav #img img {
   left: 5%;
 }
 
-#navbar #menu-links {
+nav #menu-links {
   background-color: orange;
   width: 100%;
   height: 100%;
@@ -76,14 +76,14 @@ nav #img img {
   text-align: center center;*/
 }
 
-#navbar #menu-links #menu01,
-#navbar #menu-links #menu02,
-#navbar #menu-links #menu03,
-#navbar #menu-links #menu04,
-#navbar #menu-links #menu05,
-#navbar #menu-links #menu06,
-#navbar #menu-links #menu07,
-#navbar #menu-links #menu08 {
+nav #menu-links #menu01,
+nav #menu-links #menu02,
+nav #menu-links #menu03,
+nav #menu-links #menu04,
+nav #menu-links #menu05,
+nav #menu-links #menu06,
+nav #menu-links #menu07,
+nav #menu-links #menu08 {
   background-color: orange;
   width: 100%;
   height: 100%;
@@ -102,35 +102,35 @@ nav #img img {
   text-align: center center;*/
 }
 
-#navbar #menu-links #menu01 {
+nav #menu-links #menu01 {
   left: 10%;
 }
 
-#navbar #menu-links #menu02 {
+nav #menu-links #menu02 {
   left: 20%;
 }
 
-#navbar #menu-links #menu03 {
+nav #menu-links #menu03 {
   left: 30%;
 }
 
-#navbar #menu-links #menu04 {
+nav #menu-links #menu04 {
   left: 40%;
 }
 
-#navbar #menu-links #menu05 {
+nav #menu-links #menu05 {
   left: 50%;
 }
 
-#navbar #menu-links #menu06 {
+nav #menu-links #menu06 {
   left: 60%;
 }
 
-#navbar #menu-links #menu07 {
+nav #menu-links #menu07 {
   left: 70%;
 }
 
-#navbar #menu-links #menu08 {
+nav #menu-links #menu08 {
   left: 80%;
 }
 

@@ -5,6 +5,7 @@
   box-sizing: border-box;
 }
 
+/* NAV PRINCIPAL */
 nav {
   background-color: rgb(21, 125, 162);
   position: absolute;
@@ -36,6 +37,7 @@ nav #img img {
 }
 */
 
+/* Título */
 nav #menu00 {
   background-color: yellow;
   width: 100%;
@@ -66,14 +68,14 @@ nav #menu00 {
   text-align: center center;*/
 }
 
-nav #menu-links #menu01,
-nav #menu-links #menu02,
-nav #menu-links #menu03,
-nav #menu-links #menu04,
-nav #menu-links #menu05,
-nav #menu-links #menu06,
-nav #menu-links #menu07,
-nav #menu-links #menu08 {
+nav #menu-links div #menu01,
+nav #menu-links div #menu02,
+nav #menu-links div #menu03,
+nav #menu-links div #menu04,
+nav #menu-links div #menu05,
+nav #menu-links div #menu06,
+nav #menu-links div #menu07,
+nav #menu-links div #menu08 {
   background-color: orange;
   width: 100%;
   height: 100%;
@@ -92,35 +94,35 @@ nav #menu-links #menu08 {
   text-align: center center;*/
 }
 
-nav #menu-links #menu01 {
+nav #menu-links div #menu01 {
   left: 10%;
 }
 
-nav #menu-links #menu02 {
+nav #menu-links div #menu02 {
   left: 20%;
 }
 
-nav #menu-links #menu03 {
+nav #menu-links div #menu03 {
   left: 30%;
 }
 
-nav #menu-links #menu04 {
+nav #menu-links div #menu04 {
   left: 40%;
 }
 
-nav #menu-links #menu05 {
+nav #menu-links div #menu05 {
   left: 50%;
 }
 
-nav #menu-links #menu06 {
+nav #menu-links div #menu06 {
   left: 60%;
 }
 
-nav #menu-links #menu07 {
+nav #menu-links div #menu07 {
   left: 70%;
 }
 
-nav #menu-links #menu08 {
+nav #menu-links div #menu08 {
   left: 80%;
 }
 

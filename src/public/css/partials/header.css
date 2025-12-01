@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-nav {
+#navbar {
   background-color: rgb(21, 125, 162);
   position: absolute;
   width: 100%;
@@ -17,6 +17,8 @@ nav {
   left: 0%;
 }
 
+/* NO SE TIENE */
+/*
 nav #img {
   width: 100%;
   height: 100%;
@@ -31,17 +33,20 @@ nav #img img {
   width: 100%;
   height: 100%;
 }
+*/
 
-#eliminar {
-  background-color: yellowgreen;
-  position: absolute;
+#navbar  #menu00 {
+  background-color: yellow;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 10%;
+  text-align: center;
   top: 0%;
-  left: 00%;
-  width: 500px;
-  height: 1500px;
+  left: 5%;
 }
 
-nav a {
+#navbar #menu-links {
   position: absolute;
   top: 30%;
   left: 5%;

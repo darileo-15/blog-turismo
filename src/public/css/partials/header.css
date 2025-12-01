@@ -28,6 +28,7 @@ nav a {
   font-size: 1.1rem;
   font-weight: 600;
   transition: 0.3s;
+  text-align: center center;
 }
 
 nav a:hover {

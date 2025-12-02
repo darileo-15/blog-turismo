@@ -1,4 +1,4 @@
-/*document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
 	const menuBtn = document.getElementById("menu-btn");
 	const menu = document.getElementById("menu-links");
 
@@ -7,8 +7,8 @@
 		menuBtn.classList.toggle("active");
 	});
 });
-*/
 
+/*
 function initHeaderMenu() {
 	const btn = document.getElementById("menu-btn");
 	const menu = document.getElementById("menu-links");
@@ -21,4 +21,4 @@ function initHeaderMenu() {
 	});
 }
 
-initHeaderMenu();
+initHeaderMenu();*/

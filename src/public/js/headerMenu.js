@@ -1,5 +1,3 @@
-// HEADERMENU.JS
-
 document.addEventListener("DOMContentLoaded", () => {
 	const menuBtn = document.getElementById("menu-btn");
 	const menuLinks = document.getElementById("menu-links");

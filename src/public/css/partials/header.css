@@ -1,14 +1,12 @@
-/* header.css — nav, hamburguesa, animaciones, responsive */
-
-/* header container */
-header {
+/* ---------- CONTENEDOR ---------- */
+#header {
   position: sticky;
   top: 0;
   z-index: 999;
 }
 
-/* nav básico */
-nav {
+/* ---------- NAV ---------- */
+#nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -17,15 +15,58 @@ nav {
   box-shadow: var(--shadow);
 }
 
-/* logo */
-header a:first-child {
+/* ---------- LOGO ---------- */
+#logo {
   font-weight: 700;
   font-size: 1.25rem;
   color: var(--color-text);
   text-decoration: none;
 }
 
-/* menu links (desktop) */
+/* ---------- BOTÓN MODO OSCURO ---------- */
+#dark-toggle {
+  background: none;
+  border: none;
+  font-size: 1.05rem;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+/* ---------- HAMBURGUESA ---------- */
+#menu-btn {
+  display: none;
+  width: 36px;
+  height: 28px;
+  background: none;
+  border: none;
+  padding: 0;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+#menu-btn span {
+  display: block;
+  height: 3px;
+  background: var(--color-text);
+  border-radius: 3px;
+  transition: transform .35s ease, opacity .25s ease, background .25s;
+}
+
+/* animación → X */
+#menu-btn.active span:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+#menu-btn.active span:nth-child(2) {
+  opacity: 0;
+}
+
+#menu-btn.active span:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+/* ---------- MENU DESKTOP ---------- */
 #menu-links {
   display: flex;
   gap: 18px;
@@ -38,7 +79,6 @@ header a:first-child {
   padding: 8px 6px;
   border-radius: 6px;
   transition: background .18s, color .18s, transform .15s;
-  text-align: center center;
 }
 
 #menu-links a:hover {
@@ -47,52 +87,10 @@ header a:first-child {
   transform: translateY(-2px);
 }
 
-/* dark button */
-.dark-btn {
-  background: none;
-  border: none;
-  font-size: 1.05rem;
-  margin-left: 10px;
-  cursor: pointer;
-}
-
-/* hamburguesa */
-#hamburger {
-  display: none;
-  width: 36px;
-  height: 28px;
-  background: none;
-  border: none;
-  padding: 0;
-  flex-direction: column;
-  justify-content: space-between;
-  cursor: pointer;
-}
-
-#hamburger span {
-  display: block;
-  height: 3px;
-  background: var(--color-text);
-  border-radius: 3px;
-  transition: transform .35s ease, opacity .25s ease, background .25s;
-}
-
-/* hamburger -> X */
-#hamburger.active span:nth-child(1) {
-  transform: translateY(10px) rotate(45deg);
-}
-
-#hamburger.active span:nth-child(2) {
-  opacity: 0;
-}
-
-#hamburger.active span:nth-child(3) {
-  transform: translateY(-10px) rotate(-45deg);
-}
-
+/* ---------- RESPONSIVE ---------- */
 /* responsive */
-@media (max-width: 768px) {
-  #menu-links {
+@media (max-width: 1150px) {
+  .menu-links {
     position: absolute;
     top: 64px;
     right: 14px;
@@ -111,16 +109,16 @@ header a:first-child {
     display: flex;
   }
 
-  #hamburger {
+  .hamburger {
     display: flex;
   }
 
-  /* hide inline links spacing on mobile if needed */
-  #menu-links a {
+  .menu-links a {
     padding: 10px;
   }
 }
 
+/* animación */
 @keyframes fadeDown {
   from {
     opacity: 0;
@@ -132,4 +130,3 @@ header a:first-child {
     transform: translateY(0);
   }
 }
-

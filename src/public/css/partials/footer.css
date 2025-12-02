@@ -1,17 +1,8 @@
 footer {
-  background: #003D73;
-  color: white;
-  text-align: center;
+  background: #157DA2;
   padding: 20px;
-  margin-top: 30px;
-  font-size: 0.9rem;
 }
 
-footer a {
-  color: #F2C230;
-  text-decoration: none;
-}
-
-footer a:hover {
-  color: #ffffff;
+footer nav a {
+  color: white;
 }

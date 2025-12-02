@@ -91,7 +91,7 @@
 }
 
 /* responsive */
-@media (max-width: 950px) {
+@media (max-width: 960px) {
   .menu-links {
     position: absolute;
     top: 64px;

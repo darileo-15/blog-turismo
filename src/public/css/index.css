@@ -1,0 +1,112 @@
+/* --- estilos base (desktop / pantallas medianas y grandes) --- */
+
+.turismo-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.turismo-container h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+    color: #0a4a6a;
+}
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    gap: 25px;
+}
+
+.tarjeta {
+    background: #fff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.tarjeta:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.18);
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.tarjeta .contenido {
+    padding: 15px 20px;
+}
+
+.tarjeta h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #0d6d88;
+}
+
+.tarjeta p {
+    color: #333;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+.tarjeta video {
+    width: 100%;
+    border-top: 1px solid #eee;
+}
+
+/* --- media queries: para pantallas pequeñas / móviles --- */
+
+@media screen and (max-width: 768px) {
+    .turismo-container {
+        margin: 20px auto;
+        padding: 0 10px;
+    }
+
+    .turismo-container h2 {
+        font-size: 1.8rem;
+    }
+
+    .tarjetas {
+        gap: 15px;
+    }
+
+    .tarjeta img {
+        height: 180px;
+    }
+
+    .tarjeta .contenido {
+        padding: 12px 15px;
+    }
+
+    .tarjeta h3 {
+        font-size: 1.2rem;
+    }
+
+    .tarjeta p {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .tarjeta img {
+        height: 150px;
+    }
+
+    .tarjeta .contenido {
+        padding: 10px 12px;
+    }
+
+    .tarjeta h3 {
+        font-size: 1.1rem;
+    }
+
+    .tarjeta p {
+        font-size: 0.85rem;
+    }
+}

@@ -1,27 +1,20 @@
-document.addEventListener("DOMContentLoaded", () => {
-	const headerTarget = document.getElementById("header-placeholder");
-	const footerTarget = document.getElementById("footer-placeholder");
+// loadComponents.js
+document.addEventListener("DOMContentLoaded", async () => {
+	// cargar header
+	const headerPlaceholder = document.getElementById("header-placeholder");
+	const header = await fetch("/blog-turismo/src/views/partials/header.html").then(
+		(res) => res.text()
+	);
+	headerPlaceholder.innerHTML = header;
 
-	// carga header
-	fetch("src/views/partials/header.html")
-		.then((res) => {
-			if (!res.ok) throw new Error("No se pudo cargar header");
-			return res.text();
-		})
-		.then((html) => {
-			headerTarget.innerHTML = html;
-			// inicializar funciones que dependen del header insertado
-			if (typeof initHeaderMenu === "function") initHeaderMenu();
-			if (typeof initDarkMode === "function") initDarkMode();
-		})
-		.catch((err) => console.error("Error cargando header:", err));
+	// cargar footer
+	const footerPlaceholder = document.getElementById("footer-placeholder");
+	const footer = await fetch("/blog-turismo/src/views/partials/footer.html").then(
+		(res) => res.text()
+	);
+	footerPlaceholder.innerHTML = footer;
 
-	// carga footer
-	fetch("src/views/partials/footer.html")
-		.then((res) => {
-			if (!res.ok) throw new Error("No se pudo cargar footer");
-			return res.text();
-		})
-		.then((html) => (footerTarget.innerHTML = html))
-		.catch((err) => console.error("Error cargando footer:", err));
+	// 🔥 ahora que el header YA EXISTE, inicializamos menú y darkmode
+	initMenu();
+	initDarkMode();
 });

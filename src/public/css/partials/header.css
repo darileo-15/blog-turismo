@@ -1,133 +1,102 @@
-/* HEADER — Navegación, menú hamburguesa, dark mode */
-
-/* Header container */
-#header {
-  position: sticky;
-  top: 0;
-  z-index: 999;
-}
-
-/* NAV */
-#nav {
-  display: relative;
+/* Estilos generales header */
+.nav {
+  position: relative;
+  display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 12px 18px;
   background: var(--color-card);
+  padding: 12px 20px;
   box-shadow: var(--shadow);
 }
 
-/* LOGO */
-#logo {
-  font-weight: 700;
+/* Logo */
+.logo {
   font-size: 1.25rem;
-  color: var(--color-text);
+  font-weight: bold;
   text-decoration: none;
-}
-
-/* MENU LINKS (DESKTOP) */
-#menu-links {
-  display: flex;
-  gap: 18px;
-  align-items: center;
-}
-
-#menu-links a {
   color: var(--color-text);
+}
+
+/* Links (desktop) */
+.menu-links {
+  display: flex;
+  gap: 20px;
+}
+
+.menu-links a {
+  text-decoration: none;
   font-weight: 600;
-  padding: 8px 6px;
-  border-radius: 6px;
-  transition: background .18s, color .18s, transform .15s;
+  color: var(--color-text);
+  transition: 0.2s;
 }
 
-#menu-links a:hover {
-  background: rgba(21, 125, 162, 0.08);
+.menu-links a:hover {
   color: var(--color-primary);
-  transform: translateY(-2px);
 }
 
-/* DARK MODE BUTTON */
-#dark-toggle {
+/* Botón modo oscuro */
+.dark-btn {
   background: none;
   border: none;
-  font-size: 1.2rem;
-  margin-right: 10px;
   cursor: pointer;
+  font-size: 20px;
+  margin-right: 10px;
   color: var(--color-text);
 }
 
-/* HAMBURGER BUTTON */
-#menu-btn {
+/* HAMBURGUESA */
+.hamburger {
   display: none;
   width: 36px;
-  height: 28px;
-  background: none;
-  border: none;
-  padding: 0;
+  height: 26px;
   flex-direction: column;
   justify-content: space-between;
+  border: none;
+  background: transparent;
   cursor: pointer;
 }
 
-#menu-btn span {
-  display: block;
-  height: 3px;
+.hamburger span {
+  height: 4px;
   background: var(--color-text);
   border-radius: 3px;
-  transition: transform .35s ease, opacity .25s ease, background .25s;
+  transition: 0.3s;
 }
 
-/* HAMBURGER → X */
-#menu-btn.active span:nth-child(1) {
+.hamburger.active span:nth-child(1) {
   transform: translateY(10px) rotate(45deg);
 }
 
-#menu-btn.active span:nth-child(2) {
+.hamburger.active span:nth-child(2) {
   opacity: 0;
 }
 
-#menu-btn.active span:nth-child(3) {
+.hamburger.active span:nth-child(3) {
   transform: translateY(-10px) rotate(-45deg);
 }
 
-/* RESPONSIVE */
-@media (max-width: 960px) {
-  #menu-links {
+/* Responsive */
+@media (max-width: 900px) {
+  .menu-links {
     position: absolute;
-    top: 64px;
-    right: 14px;
-    width: 210px;
-    flex-direction: column;
+    top: 60px;
+    right: 15px;
     background: var(--color-card);
-    border-radius: 10px;
-    padding: 10px;
-    gap: 8px;
+    padding: 15px;
     display: none;
+    flex-direction: column;
+    gap: 12px;
+    width: 200px;
+    border-radius: 8px;
     box-shadow: var(--shadow);
-    animation: fadeDown .22s ease;
+    z-index: 50;
   }
 
-  #menu-links.show {
+  .menu-links.show {
     display: flex;
   }
 
-  #menu-btn {
+  .hamburger {
     display: flex;
-  }
-
-  #menu-links a {
-    padding: 10px;
-  }
-}
-
-@keyframes fadeDown {
-  from {
-    opacity: 0;
-    transform: translateY(-6px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
   }
 }

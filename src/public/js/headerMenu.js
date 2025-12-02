@@ -2,10 +2,7 @@ function initMenu() {
 	const btn = document.getElementById("hamburger-btn");
 	const menu = document.getElementById("menu-links");
 
-	if (!btn || !menu) {
-		console.warn("⚠️ Menu no encontrado todavía");
-		return;
-	}
+	if (!btn || !menu) return;
 
 	btn.addEventListener("click", () => {
 		btn.classList.toggle("active");

@@ -1,20 +1,20 @@
-// loadComponents.js
 document.addEventListener("DOMContentLoaded", async () => {
+	const headerEl = document.getElementById("header-placeholder");
+	const footerEl = document.getElementById("footer-placeholder");
+
 	// cargar header
-	const headerPlaceholder = document.getElementById("header-placeholder");
-	const header = await fetch("/blog-turismo/src/views/partials/header.html").then(
-		(res) => res.text()
-	);
-	headerPlaceholder.innerHTML = header;
+	const headerHtml = await fetch(
+		"/blog-turismo/src/views/partials/header.html"
+	).then((r) => r.text());
+	headerEl.innerHTML = headerHtml;
 
 	// cargar footer
-	const footerPlaceholder = document.getElementById("footer-placeholder");
-	const footer = await fetch("/blog-turismo/src/views/partials/footer.html").then(
-		(res) => res.text()
-	);
-	footerPlaceholder.innerHTML = footer;
+	const footerHtml = await fetch(
+		"/blog-turismo/src/views/partials/footer.html"
+	).then((r) => r.text());
+	footerEl.innerHTML = footerHtml;
 
-	// 🔥 ahora que el header YA EXISTE, inicializamos menú y darkmode
+	// Inicializar funciones
 	initMenu();
 	initDarkMode();
 });

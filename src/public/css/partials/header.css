@@ -1,14 +1,14 @@
-/* header.css — nav, hamburguesa, animaciones, responsive */
+/* HEADER — Navegación, menú hamburguesa, dark mode */
 
-/* header container */
-.header {
+/* Header container */
+#header {
   position: sticky;
   top: 0;
   z-index: 999;
 }
 
-/* nav básico */
-.nav {
+/* NAV */
+#nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -17,22 +17,22 @@
   box-shadow: var(--shadow);
 }
 
-/* logo */
-.logo {
+/* LOGO */
+#logo {
   font-weight: 700;
   font-size: 1.25rem;
   color: var(--color-text);
   text-decoration: none;
 }
 
-/* menu links (desktop) */
-.menu-links {
+/* MENU LINKS (DESKTOP) */
+#menu-links {
   display: flex;
   gap: 18px;
   align-items: center;
 }
 
-.menu-links a {
+#menu-links a {
   color: var(--color-text);
   font-weight: 600;
   padding: 8px 6px;
@@ -40,24 +40,24 @@
   transition: background .18s, color .18s, transform .15s;
 }
 
-.menu-links a:hover {
+#menu-links a:hover {
   background: rgba(21, 125, 162, 0.08);
   color: var(--color-primary);
   transform: translateY(-2px);
 }
 
-/* dark button */
-.dark-btn {
+/* DARK MODE BUTTON */
+#dark-toggle {
   background: none;
   border: none;
-  font-size: 1.05rem;
-  margin-left: 10px;
+  font-size: 1.2rem;
+  margin-right: 10px;
   cursor: pointer;
   color: var(--color-text);
 }
 
-/* hamburguesa */
-.hamburger {
+/* HAMBURGER BUTTON */
+#menu-btn {
   display: none;
   width: 36px;
   height: 28px;
@@ -69,7 +69,7 @@
   cursor: pointer;
 }
 
-.hamburger span {
+#menu-btn span {
   display: block;
   height: 3px;
   background: var(--color-text);
@@ -77,22 +77,22 @@
   transition: transform .35s ease, opacity .25s ease, background .25s;
 }
 
-/* hamburger -> X */
-.hamburger.active span:nth-child(1) {
+/* HAMBURGER → X */
+#menu-btn.active span:nth-child(1) {
   transform: translateY(10px) rotate(45deg);
 }
 
-.hamburger.active span:nth-child(2) {
+#menu-btn.active span:nth-child(2) {
   opacity: 0;
 }
 
-.hamburger.active span:nth-child(3) {
+#menu-btn.active span:nth-child(3) {
   transform: translateY(-10px) rotate(-45deg);
 }
 
-/* responsive */
+/* RESPONSIVE */
 @media (max-width: 960px) {
-  .menu-links {
+  #menu-links {
     position: absolute;
     top: 64px;
     right: 14px;
@@ -107,15 +107,15 @@
     animation: fadeDown .22s ease;
   }
 
-  .menu-links.show {
+  #menu-links.show {
     display: flex;
   }
 
-  .hamburger {
+  #menu-btn {
     display: flex;
   }
 
-  .menu-links a {
+  #menu-links a {
     padding: 10px;
   }
 }

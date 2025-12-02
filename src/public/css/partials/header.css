@@ -38,6 +38,7 @@ header a:first-child {
   padding: 8px 6px;
   border-radius: 6px;
   transition: background .18s, color .18s, transform .15s;
+  text-align: center center;
 }
 
 #menu-links a:hover {

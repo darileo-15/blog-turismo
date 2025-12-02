@@ -21,3 +21,5 @@ function initDarkMode() {
 		localStorage.setItem("dark-mode", isDark);
 	});
 }
+
+document.addEventListener("DOMContentLoaded", initDarkMode);

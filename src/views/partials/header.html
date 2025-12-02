@@ -1,19 +1,17 @@
-<header id="header" class="header">
-    <nav id="nav" class="nav">
+<header class="header" id="header">
+    <nav class="nav" id="nav">
+        <a class="logo" id="logo" href="/blog-turismo/index.html">Blog de Turismo</a>
 
-        <!-- Logo -->
-        <a href="/blog-turismo/index.html" class="logo">Blog de Turismo</a>
+        <!-- dark toggle -->
+        <button id="dark-toggle" class="dark-btn" aria-label="Modo oscuro">🌙</button>
 
-        <!-- Botón modo oscuro -->
-        <button id="dark-toggle" class="dark-btn">🌙</button>
-
-        <!-- Botón hamburguesa -->
-        <button id="menu-btn" class="hamburger">
+        <!-- hamburguesa -->
+        <button id="menu-btn" class="hamburger" aria-label="Abrir menú">
             <span></span><span></span><span></span>
         </button>
 
-        <!-- Menú -->
-        <div id="menu-links" class="menu-links">
+        <!-- enlaces -->
+        <div id="menu-links" class="menu-links" role="navigation" aria-label="Menú principal">
             <a href="/blog-turismo/iglesias/index.html">Iglesias</a>
             <a href="/blog-turismo/parques/index.html">Parques</a>
             <a href="/blog-turismo/monumentos/index.html">Monumentos</a>
@@ -23,6 +21,9 @@
             <a href="/blog-turismo/sitios_arqueologicos/index.html">Sitios arqueológicos</a>
             <a href="/blog-turismo/cementerios/index.html">Cementerios</a>
         </div>
-
     </nav>
 </header>
+
+<!-- scripts al final del body o en head con defer -->
+<script src="/blog-turismo/src/public/js/headerMenu.js?v=2" defer></script>
+<script src="/blog-turismo/src/public/js/darkmode.js?v=2" defer></script>

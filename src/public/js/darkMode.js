@@ -1,18 +1,23 @@
+/* darkMode.js
+   Inicializa el toggle y guarda preferencia en localStorage.
+*/
+
 function initDarkMode() {
 	const toggle = document.getElementById("dark-toggle");
+	if (!toggle) return;
 
-	// Mantener modo desde LocalStorage
-	if (localStorage.getItem("dark-mode") === "true") {
+	// cargar preferencia
+	const isDarkSaved = localStorage.getItem("dark-mode") === "true";
+	if (isDarkSaved) {
 		document.body.classList.add("dark");
 		toggle.textContent = "☀️";
+	} else {
+		toggle.textContent = "🌙";
 	}
 
 	toggle.addEventListener("click", () => {
-		document.body.classList.toggle("dark");
-
-		const isDark = document.body.classList.contains("dark");
+		const isDark = document.body.classList.toggle("dark");
 		toggle.textContent = isDark ? "☀️" : "🌙";
-
 		localStorage.setItem("dark-mode", isDark);
 	});
 }

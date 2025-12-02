@@ -1,76 +1,39 @@
-<!--html lang="es">
-
-<link rel="stylesheet" href="src/public/css/partials/header.css">
-
-<nav>
-    <a href="/blog-turismo/index.html">Blog de Turismo</a>
-
-    <button id="menu-btn">☰</button>
-
-    <div id="menu-links">
-        <a href="/blog-turismo/iglesias/index.html">Iglesias</a>
-        <a href="/blog-turismo/parques/index.html">Parques</a>
-        <a href="/blog-turismo/monumentos/index.html">Monumentos</a>
-        <a href="/blog-turismo/calles/index.html">Calles históricas</a>
-        <a href="/blog-turismo/museos/index.html">Museos</a>
-        <a href="/blog-turismo/bibliotecas/index.html">Bibliotecas</a>
-        <a href="/blog-turismo/sitios_arqueologicos/index.html">Sitios arqueológicos</a>
-        <a href="/blog-turismo/cementerios/index.html">Cementerios</a>
-    </div>
-</nav>
-
-
-
-<footer>
-    <nav>
-        <a href="/blog-turismo/index.html">Blog de Turismo</a>
-    </nav>
-</footer>
-
-<body>
-
-    <div id="header"></div>
-
-    <main>
-        <h1>Bienvenido al Blog de Turismo</h1>
-        <p>Contenido del blog aquí...</p>
-    </main>
-
-</body>
-</!--html>
-
-<script-- src="/blog-turismo/src/public/js/headerMenu.js"></script-->
-
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Blog de Turismo</title>
 
-    <!-- CSS GLOBAL -->
+    <!-- CSS global y del header (global carga variables y estilos base) -->
+    <link rel="stylesheet" href="src/public/css/global.css">
     <link rel="stylesheet" href="src/public/css/partials/header.css">
-
-    <!-- JS MENÚ -->
-    <script src="src/public/js/headerMenu.js" defer></script>
-
-    <!-- JS COMPONENTES -->
-    <script src="src/public/js/loadComponents.js" defer></script>
 </head>
 
 <body>
 
-    <!-- Aquí cargará el header.html -->
+    <!-- lugar donde se insertará el header.html -->
     <div id="header-placeholder"></div>
 
-    <main>
+    <main class="container">
         <h1>Bienvenido al Blog de Turismo</h1>
-        <p>Contenido del blog aquí...</p>
+        <p>Este es el contenido principal. Crea aquí tus secciones, posts y enlaces a las páginas específicas (iglesias,
+            parques, etc.).</p>
+        <!-- Ejemplo de tarjeta -->
+        <section class="card">
+            <h2>Destino destacado</h2>
+            <p>Breve descripción del lugar turístico...</p>
+        </section>
     </main>
 
-    <!-- Aquí cargará el footer.html -->
+    <!-- lugar donde se insertará el footer.html -->
     <div id="footer-placeholder"></div>
 
+    <!-- scripts: loadComponents carga header/footer y luego inicializa menú y darkmode -->
+    <script src="src/public/js/loadComponents.js" defer></script>
+    <script src="src/public/js/headerMenu.js" defer></script>
+    <script src="src/public/js/darkMode.js" defer></script>
 </body>
 
 </html>

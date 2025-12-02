@@ -1,63 +1,84 @@
+/* header.css — nav, hamburguesa, animaciones, responsive */
+
+/* header container */
 header {
-  background: var(--color-card);
-  box-shadow: var(--shadow);
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 999;
 }
 
-/* ---------------- NAV BAR ---------------- */
+/* nav básico */
 .nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: .8rem 1rem;
+  padding: 12px 18px;
+  background: var(--color-card);
+  box-shadow: var(--shadow);
 }
 
-.nav .logo {
-  font-size: 1.4rem;
-  font-weight: bold;
-  text-decoration: none;
+/* logo */
+.logo {
+  font-weight: 700;
+  font-size: 1.25rem;
   color: var(--color-text);
+  text-decoration: none;
 }
 
-/* ---------------- MENÚ DESKTOP ---------------- */
+/* menu links (desktop) */
 .menu-links {
   display: flex;
-  gap: 1.2rem;
+  gap: 18px;
+  align-items: center;
 }
 
 .menu-links a {
   color: var(--color-text);
-  text-decoration: none;
-  font-weight: 500;
-  transition: .25s;
+  font-weight: 600;
+  padding: 8px 6px;
+  border-radius: 6px;
+  transition: background .18s, color .18s, transform .15s;
 }
 
 .menu-links a:hover {
+  background: rgba(21, 125, 162, 0.08);
   color: var(--color-primary);
+  transform: translateY(-2px);
 }
 
-/* ---------------- HAMBURGUESA ---------------- */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
+/* dark button */
+.dark-btn {
   background: none;
   border: none;
+  font-size: 1.05rem;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+/* hamburguesa */
+.hamburger {
+  display: none;
+  width: 36px;
+  height: 28px;
+  background: none;
+  border: none;
+  padding: 0;
+  flex-direction: column;
+  justify-content: space-between;
   cursor: pointer;
 }
 
 .hamburger span {
-  width: 24px;
+  display: block;
   height: 3px;
   background: var(--color-text);
-  transition: .3s;
+  border-radius: 3px;
+  transition: transform .35s ease, opacity .25s ease, background .25s;
 }
 
-/* Animación X */
+/* hamburger -> X */
 .hamburger.active span:nth-child(1) {
-  transform: rotate(45deg) translateY(8px);
+  transform: translateY(10px) rotate(45deg);
 }
 
 .hamburger.active span:nth-child(2) {
@@ -65,24 +86,24 @@ header {
 }
 
 .hamburger.active span:nth-child(3) {
-  transform: rotate(-45deg) translateY(-8px);
+  transform: translateY(-10px) rotate(-45deg);
 }
 
-/* ---------------- RESPONSIVE ---------------- */
+/* responsive */
 @media (max-width: 768px) {
-
   .menu-links {
     position: absolute;
-    top: 70px;
-    right: 15px;
-    display: none;
+    top: 64px;
+    right: 14px;
+    width: 210px;
     flex-direction: column;
     background: var(--color-card);
-    padding: 1rem;
     border-radius: 10px;
+    padding: 10px;
+    gap: 8px;
+    display: none;
     box-shadow: var(--shadow);
-    width: 200px;
-    animation: fadeIn .25s ease-in;
+    animation: fadeDown .22s ease;
   }
 
   .menu-links.show {
@@ -92,12 +113,17 @@ header {
   .hamburger {
     display: flex;
   }
+
+  /* hide inline links spacing on mobile if needed */
+  .menu-links a {
+    padding: 10px;
+  }
 }
 
-@keyframes fadeIn {
+@keyframes fadeDown {
   from {
     opacity: 0;
-    transform: translateY(-5px);
+    transform: translateY(-6px);
   }
 
   to {
@@ -106,11 +132,3 @@ header {
   }
 }
 
-/* ---------- BOTÓN DARK MODE ---------- */
-.dark-btn {
-  margin-left: 10px;
-  font-size: 1.2rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-}

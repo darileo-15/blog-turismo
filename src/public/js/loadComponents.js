@@ -1,37 +1,27 @@
-/*
 document.addEventListener("DOMContentLoaded", () => {
-	const header = document.getElementById("header-placeholder");
-	const footer = document.getElementById("footer-placeholder");
+	const headerTarget = document.getElementById("header-placeholder");
+	const footerTarget = document.getElementById("footer-placeholder");
 
+	// carga header
 	fetch("src/views/partials/header.html")
-		.then((res) => res.text())
+		.then((res) => {
+			if (!res.ok) throw new Error("No se pudo cargar header");
+			return res.text();
+		})
 		.then((html) => {
-			header.innerHTML = html;
-			initHeaderMenu(); // 🔥 importante para activar el JS del menú
+			headerTarget.innerHTML = html;
+			// inicializar funciones que dependen del header insertado
+			if (typeof initHeaderMenu === "function") initHeaderMenu();
+			if (typeof initDarkMode === "function") initDarkMode();
 		})
 		.catch((err) => console.error("Error cargando header:", err));
 
+	// carga footer
 	fetch("src/views/partials/footer.html")
-		.then((res) => res.text())
-		.then((html) => (footer.innerHTML = html))
+		.then((res) => {
+			if (!res.ok) throw new Error("No se pudo cargar footer");
+			return res.text();
+		})
+		.then((html) => (footerTarget.innerHTML = html))
 		.catch((err) => console.error("Error cargando footer:", err));
-});
-*/
-
-document.addEventListener("DOMContentLoaded", () => {
-	// Cargar HEADER
-	fetch("/blog-turismo/src/views/partials/header.html")
-		.then((r) => r.text())
-		.then((html) => {
-			document.getElementById("header").innerHTML = html;
-			initHeaderMenu();
-			initDarkMode();
-		});
-
-	// Cargar FOOTER
-	fetch("/blog-turismo/src/views/partials/footer.html")
-		.then((r) => r.text())
-		.then((html) => {
-			document.getElementById("footer").innerHTML = html;
-		});
 });

@@ -7,6 +7,7 @@
 
 /* ---------- NAV ---------- */
 #nav {
+  background-color: #2596be;
   display: flex;
   align-items: center;
   justify-content: space-between;

@@ -1,67 +1,116 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+header {
+  background: var(--color-card);
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-nav {
-  background-color: rgb(21, 125, 162);
+/* ---------------- NAV BAR ---------------- */
+.nav {
   display: flex;
   align-items: center;
-  text-align: center center;
   justify-content: space-between;
-  padding: 12px 20px;
-  color: white;
+  padding: .8rem 1rem;
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.1rem;
+.nav .logo {
+  font-size: 1.4rem;
   font-weight: bold;
+  text-decoration: none;
+  color: var(--color-text);
 }
 
-#menu-btn {
-  color: white;
+/* ---------------- MENÚ DESKTOP ---------------- */
+.menu-links {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.menu-links a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: 500;
+  transition: .25s;
+}
+
+.menu-links a:hover {
+  color: var(--color-primary);
+}
+
+/* ---------------- HAMBURGUESA ---------------- */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
   background: none;
   border: none;
-  font-size: 28px;
   cursor: pointer;
-  display: none;
 }
 
-/* Links en línea (PC) */
-#menu-links {
-  display: flex;
-  gap: 20px;
+.hamburger span {
+  width: 24px;
+  height: 3px;
+  background: var(--color-text);
+  transition: .3s;
 }
 
-/* HOVER */
-nav a:hover {
-  color: #ffe08a;
+/* Animación X */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
 }
 
-/* ----------- RESPONSIVE ----------- */
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}
+
+/* ---------------- RESPONSIVE ---------------- */
 @media (max-width: 768px) {
 
-  #menu-btn {
-    display: block;
-  }
-
-  #menu-links {
-    background-color: green;
+  .menu-links {
+    position: absolute;
+    top: 70px;
+    right: 15px;
     display: none;
     flex-direction: column;
-    width: 100%;
-    background-color: rgb(21, 125, 162);
-    padding: 10px 0;
+    background: var(--color-card);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    width: 200px;
+    animation: fadeIn .25s ease-in;
   }
 
-  #menu-links.show {
+  .menu-links.show {
     display: flex;
   }
 
-  #menu-links a {
-    padding: 10px 20px;
+  .hamburger {
+    display: flex;
   }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- BOTÓN DARK MODE ---------- */
+.dark-btn {
+  margin-left: 10px;
+  font-size: 1.2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
 }

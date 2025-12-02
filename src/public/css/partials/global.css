@@ -1,0 +1,35 @@
+/* ---------- VARIABLES DE COLOR ---------- */
+:root {
+    --color-bg: #ffffff;
+    --color-text: #222;
+    --color-primary: #0088ff;
+    --color-card: #f4f7fa;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Modo oscuro */
+.dark {
+    --color-bg: #0f0f0f;
+    --color-text: #f1f1f1;
+    --color-card: #1a1a1a;
+    --shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: Arial, sans-serif;
+    transition: background 0.25s ease-in-out, color 0.25s;
+}
+
+a {
+    color: var(--color-primary);
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 1rem;
+}

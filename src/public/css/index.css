@@ -1,112 +1,72 @@
-/* --- estilos base (desktop / pantallas medianas y grandes) --- */
+/* ============
+   TARJETAS INDEX
+   ============ */
 
-.turismo-container {
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 0 20px;
-}
-
-.turismo-container h2 {
-    text-align: center;
-    font-size: 2.2rem;
-    margin-bottom: 25px;
-    color: #0a4a6a;
-}
-
-.tarjetas {
+.index-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
 }
 
-.tarjeta {
-    background: #fff;
-    border-radius: 18px;
+.index-card {
+    background: var(--color-card);
+    box-shadow: var(--shadow);
+    border-radius: 14px;
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: transform .3s ease, box-shadow .3s ease;
+    transition: transform .25s ease;
+    cursor: pointer;
+    display: block;
 }
 
-.tarjeta:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.18);
+.index-card:hover {
+    transform: translateY(-6px);
 }
 
-.tarjeta img {
+.index-card img {
     width: 100%;
-    height: 220px;
+    height: 180px;
     object-fit: cover;
 }
 
-.tarjeta .contenido {
-    padding: 15px 20px;
+.index-card .content {
+    padding: 15px;
 }
 
-.tarjeta h3 {
-    font-size: 1.4rem;
-    margin-bottom: 10px;
-    color: #0d6d88;
+.index-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 6px;
 }
 
-.tarjeta p {
-    color: #333;
-    line-height: 1.5;
-    font-size: 0.95rem;
+.index-card p {
+    opacity: .85;
 }
 
-.tarjeta video {
+
+/* ============
+   CARRUSEL
+   ============ */
+.carousel {
     width: 100%;
-    border-top: 1px solid #eee;
+    overflow: hidden;
+    border-radius: 12px;
+    margin-top: 25px;
+    background: var(--color-card);
+    box-shadow: var(--shadow);
 }
 
-/* --- media queries: para pantallas pequeñas / móviles --- */
-
-@media screen and (max-width: 768px) {
-    .turismo-container {
-        margin: 20px auto;
-        padding: 0 10px;
-    }
-
-    .turismo-container h2 {
-        font-size: 1.8rem;
-    }
-
-    .tarjetas {
-        gap: 15px;
-    }
-
-    .tarjeta img {
-        height: 180px;
-    }
-
-    .tarjeta .contenido {
-        padding: 12px 15px;
-    }
-
-    .tarjeta h3 {
-        font-size: 1.2rem;
-    }
-
-    .tarjeta p {
-        font-size: 0.9rem;
-        line-height: 1.4;
-    }
+.carousel-track {
+    display: flex;
+    transition: transform .5s ease;
 }
 
-@media screen and (max-width: 480px) {
-    .tarjeta img {
-        height: 150px;
-    }
+.carousel-item {
+    min-width: 100%;
+}
 
-    .tarjeta .contenido {
-        padding: 10px 12px;
-    }
-
-    .tarjeta h3 {
-        font-size: 1.1rem;
-    }
-
-    .tarjeta p {
-        font-size: 0.85rem;
-    }
+.carousel-item img,
+.carousel-item video {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
 }

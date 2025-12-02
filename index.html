@@ -18,59 +18,15 @@
     <div id="header-placeholder"></div>
 
     <main>
-    <!--
+
         <h1>Bienvenido al Blog de Turismo</h1>
         <p>Este es el contenido principal. Crea aquí tus secciones, posts y enlaces a las páginas específicas (iglesias,
             parques, etc.).</p>
-        <!-- Ejemplo de tarjeta ->
+        <!-- Ejemplo de tarjeta -->
         <section>
             <h2>Destino destacado</h2>
             <p>Breve descripción del lugar turístico...</p>
         </section>
-    -->
-
-    <section class="turismo-container">
-    
-        <h2>Lugares Turísticos Recomendados</h2>
-    
-        <div class="tarjetas">
-    
-            <!-- Tarjeta 1 -->
-            <div class="tarjeta">
-                <img src="https://picsum.photos/600/400?random=1" alt="Lugar turístico">
-    
-                <div class="contenido">
-                    <h3>Laguna Azul</h3>
-                    <p>
-                        Un hermoso paraíso natural rodeado de montañas y aguas cristalinas,
-                        perfecto para descansar y conectar con la naturaleza.
-                    </p>
-                </div>
-    
-                <video controls>
-                    <source src="/videos/laguna-azul.mp4" type="video/mp4">
-                </video>
-            </div>
-    
-            <!-- Tarjeta 2 -->
-            <div class="tarjeta">
-                <img src="https://picsum.photos/600/400?random=2" alt="Lugar turístico">
-    
-                <div class="contenido">
-                    <h3>Cascada del Sol</h3>
-                    <p>
-                        Una impresionante caída de agua, ideal para practicar senderismo,
-                        fotografía y disfrutar del aire fresco.
-                    </p>
-                </div>
-    
-                <video controls>
-                    <source src="/videos/cascada-sol.mp4" type="video/mp4">
-                </video>
-            </div>
-    
-        </div>
-    </section>
 
     </main>
 
@@ -81,6 +37,166 @@
     <script src="/blog-turismo/src/public/js/loadComponents.js" defer></script>
     <script src="/blog-turismo/src/public/js/headerMenu.js" defer></script>
     <script src="/blog-turismo/src/public/js/darkMode.js" defer></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog de Turismo</title>
+
+    <!-- CSS global + CSS del index -->
+    <link rel="stylesheet" href="/blog-turismo/src/public/css/global.css">
+    <link rel="stylesheet" href="/blog-turismo/src/public/css/index.css">
+
+    <!-- JS Dark Mode -->
+    <script defer src="/blog-turismo/src/public/js/darkMode.js"></script>
+</head>
+
+<body onload="initDarkMode()">
+
+    <!-- HEADER reutilizable -->
+    <div id="header-container"></div>
+
+    <main class="container">
+
+        <h1>Blog de Turismo</h1>
+        <p>Explora las mejores rutas culturales e históricas.</p>
+
+        <!-- ========================= -->
+        <!--   SECCIÓN DE CATEGORÍAS  -->
+        <!-- ========================= -->
+        <h2>Categorías</h2>
+
+        <div class="index-grid">
+
+            <a class="index-card" href="/blog-turismo/iglesias.html">
+                <img src="/blog-turismo/src/public/img/categories/iglesias.jpg">
+                <div class="content">
+                    <h3>Iglesias</h3>
+                    <p>Templos coloniales, arquitectura y patrimonio religioso.</p>
+                </div>
+            </a>
+
+            <a class="index-card" href="/blog-turismo/parques.html">
+                <img src="/blog-turismo/src/public/img/categories/parques.jpg">
+                <div class="content">
+                    <h3>Parques</h3>
+                    <p>Naturaleza, áreas verdes y lugares para relajarte.</p>
+                </div>
+            </a>
+
+            <a class="index-card" href="/blog-turismo/monumentos.html">
+                <img src="/blog-turismo/src/public/img/categories/monumentos.jpg">
+                <div class="content">
+                    <h3>Monumentos</h3>
+                    <p>Esculturas y sitios emblemáticos de la ciudad.</p>
+                </div>
+            </a>
+
+            <a class="index-card" href="/blog-turismo/calles-historicas.html">
+                <img src="/blog-turismo/src/public/img/categories/calles.jpg">
+                <div class="content">
+                    <h3>Calles Históricas</h3>
+                    <p>Rutas llenas de cultura, historia y tradición.</p>
+                </div>
+            </a>
+
+            <a class="index-card" href="/blog-turismo/museos.html">
+                <img src="/blog-turismo/src/public/img/categories/museos.jpg">
+                <div class="content">
+                    <h3>Museos</h3>
+                    <p>Arte, arqueología y cultura en un solo lugar.</p>
+                </div>
+            </a>
+
+            <a class="index-card" href="/blog-turismo/bibliotecas.html">
+                <img src="/blog-turismo/src/public/img/categories/bibliotecas.jpg">
+                <div class="content">
+                    <h3>Bibliotecas</h3>
+                    <p>Historia, libros y tesoros culturales.</p>
+                </div>
+            </a>
+
+            <a class="index-card" href="/blog-turismo/sitios-arqueologicos.html">
+                <img src="/blog-turismo/src/public/img/categories/arqueologia.jpg">
+                <div class="content">
+                    <h3>Sitios Arqueológicos</h3>
+                    <p>Restos de civilizaciones antiguas y culturas del pasado.</p>
+                </div>
+            </a>
+
+            <a class="index-card" href="/blog-turismo/cementerios.html">
+                <img src="/blog-turismo/src/public/img/categories/cementerios.jpg">
+                <div class="content">
+                    <h3>Cementerios</h3>
+                    <p>Arquitectura funeraria e historia local.</p>
+                </div>
+            </a>
+
+        </div>
+
+        <!-- ========================= -->
+        <!--          CARRUSEL         -->
+        <!-- ========================= -->
+        <h2>Galería Destacada</h2>
+
+        <div class="carousel">
+            <div class="carousel-track">
+
+                <div class="carousel-item">
+                    <img src="/blog-turismo/src/public/img/carrusel/1.jpg">
+                </div>
+
+                <div class="carousel-item">
+                    <video src="/blog-turismo/src/public/videos/carrusel/intro.mp4" controls></video>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="/blog-turismo/src/public/img/carrusel/2.jpg">
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <!-- FOOTER reutilizable -->
+    <div id="footer-container"></div>
+
+    <!-- Cargar header y footer por JS -->
+    <script>
+        // carga de header
+        fetch("/blog-turismo/src/views/partials/header.html")
+            .then(r => r.text())
+            .then(html => document.getElementById("header-container").innerHTML = html);
+
+        // carga de footer
+        fetch("/blog-turismo/src/views/partials/footer.html")
+            .then(r => r.text())
+            .then(html => document.getElementById("footer-container").innerHTML = html);
+
+        // carrusel automático
+        let indexCarousel = 0;
+        function moveCarousel() {
+            const track = document.querySelector(".carousel-track");
+            const total = document.querySelectorAll(".carousel-item").length;
+            indexCarousel = (indexCarousel + 1) % total;
+            track.style.transform = `translateX(-${indexCarousel * 100}%)`;
+        }
+        setInterval(moveCarousel, 3500);
+    </script>
+
 </body>
 
 </html>

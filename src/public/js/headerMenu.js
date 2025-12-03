@@ -1,5 +1,5 @@
-function initMenu() {
-	const btn = document.getElementById("hamburger-btn");
+document.addEventListener("DOMContentLoaded", () => {
+	const btn = document.getElementById("menu-btn");
 	const menu = document.getElementById("menu-links");
 
 	if (!btn || !menu) return;
@@ -8,4 +8,4 @@ function initMenu() {
 		btn.classList.toggle("active");
 		menu.classList.toggle("show");
 	});
-}
+});

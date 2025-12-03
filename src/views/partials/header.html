@@ -8,7 +8,7 @@
         <button id="dark-toggle" class="dark-btn" aria-label="Modo oscuro">🌙</button>
 
         <!-- Botón hamburguesa -->
-        <button id="menu-btn" class="hamburger" aria-label="Abrir menú">
+        <button id="menu-btn" class="menu-btn">☰</button>
             <span></span>
             <span></span>
             <span></span>
@@ -29,33 +29,3 @@
     </nav>
 </header>
 
-<link rel="stylesheet" href="/blog-turismo/src/public/css/header.css">
-
-<header class="header">
-    <nav class="nav">
-        <a href="/blog-turismo/index.html" class="logo">Blog de Turismo</a>
-
-        <button id="menu-btn" class="menu-btn">☰</button>
-
-        <div id="menu-links" class="menu-links">
-            <a href="/blog-turismo/iglesias.html">Iglesias</a>
-            <a href="/blog-turismo/parques.html">Parques</a>
-            <a href="/blog-turismo/monumentos.html">Monumentos</a>
-            <a href="/blog-turismo/calles.html">Calles Históricas</a>
-            <a href="/blog-turismo/museos.html">Museos</a>
-            <a href="/blog-turismo/bibliotecas.html">Bibliotecas</a>
-            <a href="/blog-turismo/arqueologicos.html">Sitios Arqueológicos</a>
-            <a href="/blog-turismo/cementerios.html">Cementerios</a>
-        </div>
-    </nav>
-</header>
-
-<script>
-    // Responsive menu
-    const btn = document.getElementById("menu-btn");
-    const links = document.getElementById("menu-links");
-
-    btn.addEventListener("click", () => {
-        links.classList.toggle("active");
-    });
-</script>

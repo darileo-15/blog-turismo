@@ -39,7 +39,7 @@
 }
 
 /* responsive */
-@media (max-width: 768px) {
+@media (max-width: 950px) {
   .menu-btn {
     display: block;
   }

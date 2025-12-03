@@ -1,10 +1,11 @@
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-    const btn = document.getElementById("menu-btn");
-    const menu = document.getElementById("menu-links");
+function initMenu() {
+	const btn = document.getElementById("hamburger-btn");
+	const menu = document.getElementById("menu-links");
 
-    btn.addEventListener("click", () => {
-        menu.classList.toggle("show");
-    });
-});
-</script>
+	if (!btn || !menu) return;
+
+	btn.addEventListener("click", () => {
+		btn.classList.toggle("active");
+		menu.classList.toggle("show");
+	});
+}

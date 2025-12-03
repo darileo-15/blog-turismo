@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="/blog-turismo/src/public/css/header.css">
 
+<!--
 <header class="header">
     <nav class="nav">
         <a href="/blog-turismo/index.html" class="logo">Blog de Turismo</a>
@@ -17,7 +18,7 @@
             <a href="/blog-turismo/cementerios.html">Cementerios</a>
         </div>
     </nav>
-</header>
+
 
 <script>
     // Responsive menu
@@ -27,4 +28,35 @@
     btn.addEventListener("click", () => {
         links.classList.toggle("active");
     });
-</script>
+</script></!-->
+
+<header id="header">
+    <nav class="nav">
+
+        <!-- Logo -->
+        <a class="logo" href="/blog-turismo/index.html">Blog de Turismo</a>
+
+        <!-- Botón modo oscuro -->
+        <button id="dark-toggle" class="dark-btn" aria-label="Modo oscuro">🌙</button>
+
+        <!-- Botón hamburguesa -->
+        <button id="hamburger-btn" class="hamburger" aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- Enlaces -->
+        <div id="menu-links" class="menu-links">
+            <a href="/blog-turismo/iglesias/index.html">Iglesias</a>
+            <a href="/blog-turismo/parques/index.html">Parques</a>
+            <a href="/blog-turismo/monumentos/index.html">Monumentos</a>
+            <a href="/blog-turismo/calles/index.html">Calles históricas</a>
+            <a href="/blog-turismo/museos/index.html">Museos</a>
+            <a href="/blog-turismo/bibliotecas/index.html">Bibliotecas</a>
+            <a href="/blog-turismo/sitios_arqueologicos/index.html">Sitios arqueológicos</a>
+            <a href="/blog-turismo/cementerios/index.html">Cementerios</a>
+        </div>
+
+    </nav>
+</header>

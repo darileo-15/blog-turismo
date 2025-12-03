@@ -6,17 +6,23 @@
   border-bottom: 1px solid #ddd;
 }
 
-/* nav */
+/* Estilos generales header */
 .nav {
+  position: relative;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  background: var(--color-card);
   padding: 12px 20px;
+  box-shadow: var(--shadow);
 }
 
+/* Logo */
 .logo {
-  font-size: 22px;
+  font-size: 1.25rem;
   font-weight: bold;
+  text-decoration: none;
+  color: var(--color-text);
 }
 
 .menu-btn {
@@ -27,32 +33,86 @@
   display: none;
 }
 
-/* links */
+/* Links (desktop) */
 .menu-links {
   display: flex;
-  gap: 18px;
+  gap: 20px;
 }
 
 .menu-links a {
   text-decoration: none;
-  color: #333;
+  font-weight: 600;
+  color: var(--color-text);
+  transition: 0.2s;
 }
 
-/* responsive */
-@media (max-width: 950px) {
-  .menu-btn {
-    display: block;
-  }
+.menu-links a:hover {
+  color: var(--color-primary);
+}
 
+/* Botón modo oscuro */
+.dark-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  margin-right: 10px;
+  color: var(--color-text);
+}
+
+/* HAMBURGUESA */
+.hamburger {
+  display: none;
+  width: 36px;
+  height: 26px;
+  flex-direction: column;
+  justify-content: space-between;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 4px;
+  background: var(--color-text);
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
   .menu-links {
+    position: absolute;
+    top: 60px;
+    right: 15px;
+    background: var(--color-card);
+    padding: 15px;
     display: none;
     flex-direction: column;
-    width: 100%;
-    background: #fff;
-    padding: 10px;
+    gap: 12px;
+    width: 200px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    z-index: 50;
   }
 
-  .menu-links.active {
+  .menu-links.show {
+    display: flex;
+  }
+
+  .hamburger {
     display: flex;
   }
 }

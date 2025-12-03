@@ -1,10 +1,122 @@
-.header {
+/*.header {
   position: sticky;
   top: 0;
   background: #fff;
   z-index: 1000;
   border-bottom: 1px solid #ddd;
 }
+
+/* Estilos generales header *
+.nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--color-card);
+  padding: 12px 20px;
+  box-shadow: var(--shadow);
+}
+
+/* Logo *
+.logo {
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+.menu-btn {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+
+/* Links (desktop) *
+.menu-links {
+  display: flex;
+  gap: 20px;
+}
+
+.menu-links a {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--color-text);
+  transition: 0.2s;
+  text-align: center center;
+}
+
+.menu-links a:hover {
+  color: var(--color-primary);
+}
+
+/* Botón modo oscuro *
+.dark-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  margin-right: 10px;
+  color: var(--color-text);
+}
+
+/* HAMBURGUESA *
+.hamburger {
+  display: none;
+  width: 36px;
+  height: 26px;
+  flex-direction: column;
+  justify-content: space-between;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 4px;
+  background: var(--color-text);
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+/* Responsive *
+@media (max-width: 900px) {
+  .menu-links {
+    position: absolute;
+    top: 60px;
+    right: 15px;
+    background: var(--color-card);
+    padding: 15px;
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+    width: 200px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    z-index: 50;
+  }
+
+  .menu-links.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}*/
 
 /* Estilos generales header */
 .nav {
@@ -25,14 +137,6 @@
   color: var(--color-text);
 }
 
-.menu-btn {
-  font-size: 24px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  display: none;
-}
-
 /* Links (desktop) */
 .menu-links {
   display: flex;
@@ -44,7 +148,6 @@
   font-weight: 600;
   color: var(--color-text);
   transition: 0.2s;
-  text-align: center center;
 }
 
 .menu-links a:hover {
@@ -93,7 +196,7 @@
 }
 
 /* Responsive */
-@media (max-width: 900px) {
+@media (max-width: 950px) {
   .menu-links {
     position: absolute;
     top: 60px;

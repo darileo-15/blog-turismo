@@ -1,11 +1,10 @@
-function initMenu() {
-	const btn = document.getElementById("hamburger-btn");
-	const menu = document.getElementById("menu-links");
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const btn = document.getElementById("menu-btn");
+    const menu = document.getElementById("menu-links");
 
-	if (!btn || !menu) return;
-
-	btn.addEventListener("click", () => {
-		btn.classList.toggle("active");
-		menu.classList.toggle("show");
-	});
-}
+    btn.addEventListener("click", () => {
+        menu.classList.toggle("show");
+    });
+});
+</script>
